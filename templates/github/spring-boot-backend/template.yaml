@@ -145,7 +145,7 @@ spec:
           groupId: ${{ parameters.groupId }}
           artifactId: ${{ parameters.artifactId }}
           javaPackageName: ${{ parameters.javaPackageName }}
-          sourceControl: github.com
+          sourceControl: gitlab.cloud.ds
 
     - id: ciTemplate
       name: Generating the CI Component
@@ -170,7 +170,7 @@ spec:
           groupId: ${{ parameters.groupId }}
           artifactId: ${{ parameters.artifactId }}
           javaPackageName: ${{ parameters.javaPackageName }}
-          sourceControl: github.com
+          sourceControl: gitlab.cloud.ds
 
     - id: catalogTemplate
       name: Generating the Catalog Info Component
@@ -193,15 +193,15 @@ spec:
           groupId: ${{ parameters.groupId }}
           artifactId: ${{ parameters.artifactId }}
           javaPackageName: ${{ parameters.javaPackageName }}
-          sourceControl: github.com
+          sourceControl: gitlab.cloud.ds
 
     - id: publish
       name: Publishing to the Source Code Repository
       action: publish:github
       input:
-        allowedHosts: ['github.com']
+        allowedHosts: ['gitlab.cloud.ds']
         description: ${{ parameters.description }}
-        repoUrl: github.com?owner=${{ parameters.orgName }}&repo=${{ parameters.repoName }}
+        repoUrl: gitlab.cloud.ds?owner=${{ parameters.orgName }}&repo=${{ parameters.repoName }}
         defaultBranch: main
 
     - id: register
