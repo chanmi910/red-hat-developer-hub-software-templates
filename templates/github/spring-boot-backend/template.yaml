@@ -197,7 +197,7 @@ spec:
 
     - id: publish
       name: Publishing to the Source Code Repository
-      action: publish:github
+      action: publish:gitlab
       input:
         allowedHosts: ['gitlab.cloud.ds']
         description: ${{ parameters.description }}
