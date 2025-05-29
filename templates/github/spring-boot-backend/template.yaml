@@ -203,7 +203,7 @@ spec:
         description: ${{ parameters.description }}
         repoUrl: gitlab.cloud.ds?owner=${{ parameters.orgName }}&repo=${{ parameters.repoName }}
         defaultBranch: main
-
+ 
     - id: register
       name: Registering the Catalog Info Component
       action: catalog:register
